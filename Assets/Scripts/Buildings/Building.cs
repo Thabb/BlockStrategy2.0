@@ -17,7 +17,6 @@ namespace Buildings
         /// A list of ResourcePackets that are the product of the Production. This will need to be instantiated by the Start method of every child with the specific resources of that building.
         /// </summary>
         protected List<ResourcePacket> Output { get; set; }
-
         /// <summary>
         /// Starts the Production Coroutine.
         /// </summary>
