@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// This is a utility class, that manages stacks of items.
 /// </summary>
-public class ResourcePacket : MonoBehaviour
+public class ResourcePacket
 {
     /// <summary>
     /// Amount of resources currently inside the packet.
