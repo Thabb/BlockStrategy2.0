@@ -9,6 +9,11 @@ namespace Settlers
     public class Carrier : Settler
     {
         /// <summary>
+        /// The type/name of this settler.
+        /// </summary>
+        public new SettlerType settlerName = SettlerType.Carrier;
+        
+        /// <summary>
         /// The resource that is currently carried by the carrier. Null if no resource is being carried.
         /// </summary>
         /// <remarks>Will be relevant in the future for visuals.</remarks>

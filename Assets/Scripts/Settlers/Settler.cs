@@ -9,6 +9,20 @@ namespace Settlers
     public class Settler : MonoBehaviour
     {
         /// <summary>
+        /// An enum to save all the different types of settlers in.
+        /// </summary>
+        public enum SettlerType
+        {
+            Settler,
+            Carrier
+        }
+
+        /// <summary>
+        /// The type/name of this settler.
+        /// </summary>
+        public SettlerType settlerName = SettlerType.Settler;
+        
+        /// <summary>
         /// Reference to the NavMeshAgent that is attached to every unit.
         /// </summary>
         internal NavMeshAgent Nav;
