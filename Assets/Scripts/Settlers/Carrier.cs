@@ -17,7 +17,7 @@ namespace Settlers
         /// The resource that is currently carried by the carrier. Null if no resource is being carried.
         /// </summary>
         /// <remarks>Will be relevant in the future for visuals.</remarks>
-        private string CarriedResource { get; set; }
+        private ResourcePacket.Resource CarriedResource { get; set; }
         
         /// <summary>
         /// Main responsibility of a carrier is picking up items from one location and dropping them off at another.
@@ -64,7 +64,7 @@ namespace Settlers
             if (packet.ResourceCount < packet.MaxResourceCount && packet.ResourceType == CarriedResource)
             {
                 packet.ResourceCount += 1;
-                CarriedResource = null;
+                CarriedResource = ResourcePacket.Resource.None;
             }
             else
             {

@@ -20,8 +20,8 @@ namespace Buildings
         private new void Start()
         {
             base.Start();
-            Input = new List<ResourcePacket>() { new ResourcePacket("log", 8, transform.position) }; // TODO: Change transform.position to a position that is slightly offset from the building position
-            Output = new List<ResourcePacket>() {new ResourcePacket("plank", 8, transform.position)}; // TODO: Change transform.position to a position that is slightly offset from the building position
+            Input = new List<ResourcePacket>() { new ResourcePacket(ResourcePacket.Resource.Log, 8, transform.position) }; // TODO: Change transform.position to a position that is slightly offset from the building position
+            Output = new List<ResourcePacket>() {new ResourcePacket(ResourcePacket.Resource.Plank, 8, transform.position)}; // TODO: Change transform.position to a position that is slightly offset from the building position
         }
 
         /// <summary>
