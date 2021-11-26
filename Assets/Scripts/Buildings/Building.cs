@@ -26,11 +26,11 @@ namespace Buildings
         /// <summary>
         /// A list of ResourcePackets that are used for the Production. This will need to be instantiated by the Start method of every child with the specific resources of that building.
         /// </summary>
-        protected List<ResourcePacket> Input { get; set; }
+        public List<ResourcePacket> Input { get; set; }
         /// <summary>
         /// A list of ResourcePackets that are the product of the Production. This will need to be instantiated by the Start method of every child with the specific resources of that building.
         /// </summary>
-        protected List<ResourcePacket> Output { get; set; }
+        public List<ResourcePacket> Output { get; set; }
         /// <summary>
         /// Starts the Production Coroutine.
         /// </summary>

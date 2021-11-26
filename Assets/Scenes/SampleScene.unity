@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &119418692
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1040,7 +1040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &765883823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,6 +1134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12bdcd391a1ac80499c157b19f3a08b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settlerInformation: {fileID: 970198838}
+  settlerType: {fileID: 449242896}
+  buildingInformation: {fileID: 282133752}
+  buildingType: {fileID: 615708170}
+  inputInformation: {fileID: 558246337}
+  outputInformation: {fileID: 109232234}
 --- !u!1 &855149889
 GameObject:
   m_ObjectHideFlags: 0
