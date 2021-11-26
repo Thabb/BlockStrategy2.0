@@ -17,23 +17,34 @@ public class PlayerInputController : MonoBehaviour
     {
         if (IsMouseOnScreen())
         {
-            if (Input.mousePosition.y >= Screen.height * 0.95)
+            // camera movement
+            if (Input.mousePosition.y >= Screen.height * 0.95f)
             {
                 playerCamera.MoveForward();
             } 
-            else if (Input.mousePosition.y <= Screen.height * 0.05)
+            else if (Input.mousePosition.y <= Screen.height * 0.05f)
             {
                 playerCamera.MoveBackward();    
             }
-            else if (Input.mousePosition.x >= Screen.width * 0.95)
+            else if (Input.mousePosition.x >= Screen.width * 0.95f)
             {
                 playerCamera.MoveRight();
             }
-            else if (Input.mousePosition.x <= Screen.width * 0.05)
+            else if (Input.mousePosition.x <= Screen.width * 0.05f)
             {
                 playerCamera.MoveLeft();
+            } 
+            // scrolling
+            if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+            {
+                playerCamera.ZoomIn();
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            {
+                playerCamera.ZoomOut();    
             }
         }
+        Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
     }
 
     /// <summary>

@@ -8,11 +8,11 @@ public class PlayerCamera : MonoBehaviour
     /// <summary>
     /// Speed with which the camera will move to the sides.
     /// </summary>
-    private const float ScrollSpeed = 5;
+    private const float ScrollSpeed = 20;
     /// <summary>
     /// Speed with which the camera zooms in and out.
     /// </summary>
-    private const float ZoomSpeed = 1;
+    private const float ZoomSpeed = 2000;
     
     /// <summary>
     /// Moves the camera forward, towards the upper end of the screen.
