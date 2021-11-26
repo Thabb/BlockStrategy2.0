@@ -6,11 +6,20 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour
 {
     /// <summary>
+    /// Speed with which the camera will move to the sides.
+    /// </summary>
+    private const float ScrollSpeed = 5;
+    /// <summary>
+    /// Speed with which the camera zooms in and out.
+    /// </summary>
+    private const float ZoomSpeed = 1;
+    
+    /// <summary>
     /// Moves the camera forward, towards the upper end of the screen.
     /// </summary>
     public void MoveForward()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime);
+        transform.Translate(new Vector3(0,0, ScrollSpeed) * Time.deltaTime);
     }
 
     /// <summary>
@@ -18,7 +27,7 @@ public class PlayerCamera : MonoBehaviour
     /// </summary>
     public void MoveBackward()
     {
-        transform.Translate(Vector3.back * Time.deltaTime);
+        transform.Translate(new Vector3(0, 0, -ScrollSpeed) * Time.deltaTime);
     }
 
     /// <summary>
@@ -26,7 +35,7 @@ public class PlayerCamera : MonoBehaviour
     /// </summary>
     public void MoveRight()
     {
-        transform.Translate(Vector3.right * Time.deltaTime);
+        transform.Translate(new Vector3(ScrollSpeed,0,0) *  Time.deltaTime);
     }
 
     /// <summary>
@@ -34,7 +43,7 @@ public class PlayerCamera : MonoBehaviour
     /// </summary>
     public void MoveLeft()
     {
-        transform.Translate(Vector3.left * Time.deltaTime);
+        transform.Translate(new Vector3(-ScrollSpeed,0,0) * Time.deltaTime);
     }
 
     /// <summary>
@@ -42,7 +51,7 @@ public class PlayerCamera : MonoBehaviour
     /// </summary>
     public void ZoomIn()
     {
-        transform.Translate(Vector3.down * Time.deltaTime);
+        transform.Translate(new Vector3(0,-ZoomSpeed,0) * Time.deltaTime);
     }
 
     /// <summary>
@@ -50,6 +59,6 @@ public class PlayerCamera : MonoBehaviour
     /// </summary>
     public void ZoomOut()
     {
-        transform.Translate(Vector3.up * Time.deltaTime);
+        transform.Translate(new Vector3(0,ZoomSpeed,0) * Time.deltaTime);
     }
 }
