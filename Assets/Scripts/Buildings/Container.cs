@@ -8,6 +8,11 @@ namespace Buildings
     public class Container : Building
     {
         /// <summary>
+        /// The type/name of this building.
+        /// </summary>
+        public override BuildingType BuildingName { get; set; } = BuildingType.Container;
+
+        /// <summary>
         /// This method is not needed in this special case of a "building".
         /// </summary>
         /// <returns>IEnumerator: - </returns>

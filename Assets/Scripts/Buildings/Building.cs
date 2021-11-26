@@ -5,10 +5,24 @@ using UnityEngine;
 namespace Buildings
 {
     /// <summary>
+    /// An enum to save all the different types of buildings in.
+    /// </summary>
+    public enum BuildingType
+    {
+        Container,
+        Woodcutter
+    }
+    
+    /// <summary>
     /// The base class for every kind of building. Shouldn't be instantiated on its own.
     /// </summary>
     public abstract class Building : MonoBehaviour
     {
+        /// <summary>
+        /// The type/name of this building.
+        /// </summary>
+        public abstract BuildingType BuildingName { get; set; }
+        
         /// <summary>
         /// A list of ResourcePackets that are used for the Production. This will need to be instantiated by the Start method of every child with the specific resources of that building.
         /// </summary>

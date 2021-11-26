@@ -10,6 +10,11 @@ namespace Buildings
     public class WoodcutterBuilding : Building
     {
         /// <summary>
+        /// The type/name of this building.
+        /// </summary>
+        public override BuildingType BuildingName { get; set; } = BuildingType.Woodcutter;
+
+        /// <summary>
         /// Initialises the Input and Output lists.
         /// </summary>
         private new void Start()
