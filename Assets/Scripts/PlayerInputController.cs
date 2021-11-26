@@ -44,7 +44,6 @@ public class PlayerInputController : MonoBehaviour
                 playerCamera.ZoomOut();    
             }
         }
-        Debug.Log(Input.GetAxis("Mouse ScrollWheel"));
     }
 
     /// <summary>
